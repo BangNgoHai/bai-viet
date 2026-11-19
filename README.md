@@ -52,7 +52,7 @@ Repo đã có sẵn `render.yaml` (Blueprint). Trên Render:
 
 1. **New → Blueprint** → chọn repo GitHub `bai-viet`.
 2. Render tự đọc cấu hình:
-   - Build: `npm install && npm run build && npm run db:push -w server`
+   - Build: `npm install --include=dev && npm run build && npm run db:push -w server`
    - Start: `npm run start -w server`
    - Health check: `/health`
    - Region: Singapore, plan Free.
