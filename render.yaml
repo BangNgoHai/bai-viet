@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: bai-viet
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install && npm run build && npm run db:push -w server
+    startCommand: npm run start -w server
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.1
